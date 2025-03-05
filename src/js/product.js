@@ -25,8 +25,8 @@ fetchData("https://dummyjson.com/product/" + id)
         product__price.textContent = `$${product.price}`;
         prod__salePersent.textContent = `$${(product.price - (product.price/100) * product.discountPercentage).toFixed(2)}`;
         product__image.src = product.thumbnail;
-        product__id.textContent = product.id;
-        prod__tags.textContent = product.tags[0];
+        product__id.textContent = `ID #${product.id}`;
+        prod__tags.textContent = `category: ${product.tags[0]}`;
         prod__description.textContent = product.description;
         reviewers__comment.textContent = product.reviews[0].comment;
         prod__rating__number.textContent = product.reviews[0].rating;
