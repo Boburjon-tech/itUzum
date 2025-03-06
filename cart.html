@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./src/images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uzum Market</title>
+    <link rel="stylesheet" href="output.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -13,9 +13,12 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./src/output.css" />
+    <title>Cart</title>
   </head>
   <body>
-    
+    <div class="loader-wrapper hidden">
+      <div class="loader"></div>
+    </div>
     <header class="bg-base-200 mb-5">
       <div class="navbar main-container">
         <div class="navbar-start">
@@ -38,34 +41,40 @@
         </div>
       </div>
     </header>
-    <main class="pb-10">
-      
-      <section>
+    <main>
+      <section class="cart">
         <div class="main-container">
-          <h2 class="mb-5 text-3xl">Products:</h2>
-
-          <div
-            id="card-list"
-            class="gird-cols-2 grid gap-4 md:grid-cols-3 lg:grid-cols-4"
-          >
-            <template
-              ><a href="" class="card bg-base-100 w-full shadow-sm">
-                <figure>
-                  <img src="https://picsum.photos/id/9/300/200" alt="" />
-                </figure>
-                <div class="card-body">
-                  <p class="description line-clamp-2">
-                    A card component has a figure, a body part, and inside body
-                    there are title and actions parts
-                  </p>
-                  <p>
-                    <i class="fa-solid fa-star text-orange-300"></i>
-                   
-                    <span class="rating">4.7</span>
-                    <span class="review">(10 Review)</span>
-                  </p>
-
-                  <div class="flex justify-between">
+          <div class="overflow-x-auto">
+            <table class="table">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th>Titile/Image/Brand</th>
+                  <th>Price</th>
+                  <th>Count</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- row 1 -->
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div class="avatar">
+                        <div class="mask mask-squircle h-12 w-12">
+                          <img
+                            src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+                            alt="Avatar Tailwind CSS Component"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-bold">Essence Mascara Lash Princess</div>
+                        <div class="text-sm opacity-50">Nail Couture</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
                     <div class="flex flex-col gap-1">
                       <del class="price badge badge-soft badge-secondary"
                         >$1999</del
@@ -76,21 +85,37 @@
                         $1555
                       </h3>
                     </div>
-                    <button
-                      class="buy-btn btn hover:btn-primary self-end rounded-full"
-                    >
-                      <i class="fa-solid fa-cart-plus text-xl"></i>
+                  </td>
+                  <td>
+                    <div class="flex items-center gap-[10px]">
+                      <button id="card-minus" class="btn btn-sm btn-primary btn-outline">
+                        -
+                      </button>
+                      <span id="card-value" class="text-xl font-extrabold"
+                        >0</span
+                      >
+                      <button id="card-plus" class="btn btn-sm btn-primary btn-outline">
+                        +
+                      </button>
+                    </div>
+                  </td>
+                  <td></td>
+                  <th>
+                    <button id="delete" class="btn btn-secondary btn-3xs">
+                      <i class="fa-solid fa-trash" style="color: #eceff4"></i>
                     </button>
-                  </div>
-                </div> </a
-            ></template>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
     </main>
-     <div class="loader-wrapper hidden">
-      <div class="loader"></div>
-    </div>
+
+    <div class="loader-wrapper hidden">
+        <div class="loader"></div>
+      </div>
     <footer class="bg-base-300 text-base-content p-4">
       <div class="main-container footer sm:footer-horizontal items-center">
         <aside class="grid-flow-col items-center">
@@ -154,6 +179,6 @@
         </nav>
       </div>
     </footer>
-    <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/cart.js"></script>
   </body>
 </html>

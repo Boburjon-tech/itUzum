@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>product</title>
+    
+    <link rel="stylesheet" href="./src/output.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -11,7 +13,6 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-    <link rel="stylesheet" href="./src/output.css">
   </head>
   <body>
     <header class="bg-base-200 mb-5">
@@ -30,7 +31,7 @@
             <button class="btn" id="mode-toggler">
               <i class="fa-solid fa-moon text-2xl"></i>
             </button>
-            <a class="btn btn-ghost" href=""
+            <a class="btn btn-ghost" href="./cart.html"
               ><i class="fa-solid fa-cart-shopping text-2xl"></i
             ></a>
           </div>
@@ -38,46 +39,41 @@
       </header>
 
 
-
-      <main class="justify-center flex">
-          <div class="prod__main__cotainer flex flex-col gap-y-12">
-          <div class="first__line__div flex  gap-12">
-            <div class="img__and__name border-3 border-pink-400">
-            <a class="image__link"  href="">
-              <img class="images__img" src="" alt="" width="200" height="200">
+      <main class="justify-center flex items-center ">
+          <div class="prod__main__cotainer  border-amber-300 border-4 mb-30  rounded-3xl flex flex-col gap-y-8">
+          <div class="first__line__div flex  gap-12 mt-3 mr-3 ml-3 ">
+            <div class="img__and__name flex glass flex-col gap-10 border-3 rounded-3xl border-amber-300 ml-3 mt-3">
+              <h2 class="product__id  text-2xl ml-3 mr-3 "></h2>
+            <a class="image__link flex mr-auto ml-auto "  href="">
+              <img class=" images__img" src="" alt="" width="200" height="200">
             </a>
-            <h2 class="product__name "></h2>
             </div>
             <div class="product__abouts flex flex-col gap-7">
-              <h3 class="product__id"></h3>
-              <h4 class="prod__price line-through"></h4>
-              <p class="prod__salePersent"></p>
-              <p class="prod__tags"></p>
-              <p class="prod__description w-200"></p>
+              <h3 class="product__name text-5xl text-pink-400"></h3>
+              <h4 class="prod__price line-through text-2xl text-red-600"></h4>
+              <p class="prod__salePersent text-3xl text-green-600 "></p>
+              <p class="prod__tags text-2xl text-blue-400"></p>
+              <p class="prod__description leading-10 w-180 text-2xl text-amber-700"></p>
             </div>
           </div>
-          <div class="second__line__div">
-            <div class="prod__comments">
-              <div class="reviewer__name__rating">
-                <p class="reviewer__name"></p>
-                <a class="prod__rating" href=""><img class="star__icon" src="" alt=""><p class="prod__rating__number"></p></a>
+          <div class="second__line__div flex justify-end mb-3 ml-3">
+            <div class="prod__comments hover: flex flex-col border-4 mr-6 mb-3  rounded-3xl border-amber-200 h-auto w-80 border-double">
+              <div class="reviewer__name__rating flex p-3">
+                <p class="reviewer__name mr-auto text-12 text-amber-900"></p>
+                <a class="prod__rating flex items-center" href=""><i class="fa-solid fa-star" style="color:rgb(255, 196, 0);"></i><p class="prod__rating__number"></p></a>
               </div>
-              <p class="reviewers__comment"></p>
-              <p class="comment__date"></p>
+               <div class="loader-wrapper hidden">
+        <div class="loader"></div>
+      </div>
+              <hr class="border-1 border-amber-200 drop-shadow-2xl ">
+              <p class="reviewers__comment mb-auto p-4 opacity-55"></p>
+              <p class=" comment__date ml-auto  text-sm/2 mb-3 mr-3"></p>
             </div>
-            <div class="prod__comments">
-              <div class="reviewer__name__rating">
-                <p class="reviewer__name"></p>
-                <a class="prod__rating" href=""><i class="fa-solid fa-star" style="color:rgb(255, 196, 0);"></i><p class="prod__rating__number"></p></a>
-              </div>
-              <p class="reviewers__comment"></p>
-              <p class="comment__date"></p>
-            </div>
+           
           </div>
           </div>
       </main>
-
-
+     
 
       <footer class="bg-base-300 text-base-content p-4">
         <div class="main-container footer sm:footer-horizontal items-center">
