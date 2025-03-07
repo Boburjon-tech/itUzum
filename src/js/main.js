@@ -1,5 +1,4 @@
 import "./dark-mode.js";
-
 import { fetchData } from "./fetchData.js";
 import { showCards } from "./updateUI.js";
 

@@ -3,6 +3,7 @@ const cardList = document.getElementById("card-list");
 
 const showCards = ({ products }) => {
   products.forEach((product) => {
+    
     const {
       id,
       title,
@@ -12,7 +13,9 @@ const showCards = ({ products }) => {
       rating,
       description,
       reviews,
+      category
     } = product;
+    if(product.category==="beauty"){
 
     const clone = template.content.cloneNode(true);
 
@@ -39,12 +42,13 @@ const showCards = ({ products }) => {
     reviewText.textContent = `${reviews.length} Reviews`;
 
     cardList.appendChild(clone);
-    console.log(product )
+    
+    }
   });
 };
 
 const showProduct = (product)=> {
-  console.log(product);
+  console.log(product)
 }
 
 export { showCards, showProduct };
