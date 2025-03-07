@@ -1,5 +1,10 @@
 const template = document.querySelector("template");
 const cardList = document.getElementById("card-list");
+const selection = document.getElementById("selection"); 
+// let  selectedOption = selection.options[selection.selectedIndex].text; 
+    
+
+
 
 const showCards = ({ products }) => {
   products.forEach((product) => {
@@ -15,7 +20,8 @@ const showCards = ({ products }) => {
       reviews,
       category
     } = product;
-    // if(product.category==="beauty"){
+
+    // if(product.category===beauty){
 
     const clone = template.content.cloneNode(true);
 
