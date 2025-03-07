@@ -15,7 +15,7 @@ const showCards = ({ products }) => {
       reviews,
       category
     } = product;
-    if(product.category==="beauty"){
+    // if(product.category==="beauty"){
 
     const clone = template.content.cloneNode(true);
 
@@ -43,7 +43,7 @@ const showCards = ({ products }) => {
 
     cardList.appendChild(clone);
     
-    }
+    // }
   });
 };
 
